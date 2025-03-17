@@ -109,7 +109,7 @@ Error: syntax error, unexpected newline
 ```shell
 rm src/parser_bison.c
 rm src/parser_bison.h
-rm src/scanner.h
+rm src/scanner.c
 make clean
 make -j$(nproc)
 make install
@@ -223,7 +223,7 @@ Error: syntax error, unexpected newline
 ```shell
 rm src/parser_bison.c
 rm src/parser_bison.h
-rm src/scanner.h
+rm src/scanner.c
 make clean
 make -j$(nproc)
 make install
