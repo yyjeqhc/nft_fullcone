@@ -1,4 +1,15 @@
-
+// SPDX-License-Identifier: GPL-2.0-only
+/*
+ * Nftables NAT extension: fullcone expression support
+ *
+ * Copyright (c) 2018 Chion Tang <tech@chionlab.moe>
+ *   Original xt_FULLCONENAT and related iptables extension author
+ * Copyright (c) 2019-2022 GitHub/llccd Twitter/@gNodeB
+ *   Added IPv6 support for xt_FULLCONENAT and ip6tables extension
+ *   Ported to recent kernel versions
+ * Copyright (c) 2022 Syrone Wong <wong.syrone@gmail.com>
+ *   Massively rewrite the whole module, split the original code into library and nftables 'fullcone' expression module
+ */
 #define pr_fmt(fmt) "fullcone " KBUILD_MODNAME ": " fmt
 #define NF_FULLCONE_WORKQUEUE_NAME "fullcone " KBUILD_MODNAME ": wq"
 
@@ -450,6 +461,6 @@ module_init(nft_fullcone_module_init);
 module_exit(nft_fullcone_module_exit);
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("k0rian");
+MODULE_AUTHOR("Syrone Wong <wong.syrone@gmail.com>");
 MODULE_ALIAS_NFT_EXPR("fullcone");
 MODULE_DESCRIPTION("Netfilter nftables fullcone expression support of RFC3489 full cone NAT");
